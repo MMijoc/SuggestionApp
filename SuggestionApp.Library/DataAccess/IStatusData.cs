@@ -1,5 +1,4 @@
-﻿
-namespace SuggestionApp.Library.DataAccess;
+﻿namespace SuggestionApp.Library.DataAccess;
 
 public interface IStatusData
 {
