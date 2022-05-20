@@ -1,9 +1,8 @@
 ﻿using Microsoft.Extensions.Configuration;
-using MongoDB.Driver;
 
 namespace SuggestionApp.Library.DataAccess;
 
-public class DbConnection
+public class DbConnection : IDbConnection
 {
 	private readonly IConfiguration _config;
 	private readonly IMongoDatabase _db;
@@ -19,7 +18,6 @@ public class DbConnection
 	public IMongoCollection<StatusModel> StatusCollection { get; private set; }
 	public IMongoCollection<UserModel> UserCollection { get; private set; }
 	public IMongoCollection<SuggestionModel> SuggestionCollection { get; private set; }
-
 
 	public DbConnection(IConfiguration config)
 	{
